@@ -1,37 +1,26 @@
-#
-# Be sure to run `pod spec lint NAME.podspec' to ensure this is a
-# valid spec and remove all comments before submitting the spec.
-#
-# To learn more about the attributes see http://guides.cocoapods.org/syntax/podspec.html
-#
 Pod::Spec.new do |s|
-  s.name             = "spirit-json"
-  s.version          = "0.1.0"
-  s.summary          = "A short description of spirit-json."
-  s.description      = <<-DESC
-                       An optional longer description of spirit-json
+  s.name         = "spirit-json"
+  s.version      = "4.0.6"
+  s.summary      = "A C++ JSON Parser/Generator Implemented with Boost Spirit"
+  s.description  = <<-DESC
+JSON is a text file format similar to XML, but less verbose. It has been called "XML lite". This article describes JSON Spirit, a C++ library that reads and writes JSON files or streams. It is written using the Boost Spirit parser generator. If you are already using Boost, you can use JSON Spirit without any additional dependencies.
 
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
-                       DESC
-  s.homepage         = "http://EXAMPLE/NAME"
-  s.screenshots      = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
-  s.license          = 'MIT'
-  s.author           = { "waTeim" => "truthset@gmail.com" }
-  s.source           = { :git => "http://EXAMPLE/NAME.git", :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/NAME'
+Key features:
 
-  # s.platform     = :ios, '5.0'
-  # s.ios.deployment_target = '5.0'
-  # s.osx.deployment_target = '10.7'
-  s.requires_arc = true
+supports ASCII or Unicode
+std::vector or std::map implementations for JSON Objects
+object library or header file only use
+                   DESC
+  s.homepage     = "http://www.codeproject.com/Articles/20027/JSON-Spirit-A-C-JSON-Parser-Generator-Implemented"
+  s.screenshots  = 
+  s.license      = 'MIT'
+  s.author       = { "waTeim" => "truthset@gmail.com" }
+  s.source       = { :git => "https://github.com/waTeim/spirit-json.git", :tag => s.version.to_s }
 
-  s.source_files = 'Classes'
-  s.resources = 'Assets'
-
-  s.ios.exclude_files = 'Classes/osx'
-  s.osx.exclude_files = 'Classes/ios'
-  # s.public_header_files = 'Classes/**/*.h'
-  # s.frameworks = 'SomeFramework', 'AnotherFramework'
-  # s.dependency 'JSONKit', '~> 1.4'
+  s.platform     = :osx, '10.6'
+  s.requires_arc = false
+  s.vendored_libraries = 'lib/*.a'
+  s.source_files = 'include/*.{h,hpp}'
+  s.public_header_files = 'include/*.{h,hpp}'
+  s.preserve_paths = 'include'
 end
