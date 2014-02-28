@@ -1,0 +1,7 @@
+pod "spirit-json", :path => "../spirit-json.podspec"
+
+target "Demo" do
+end
+
+target "DemoTests" do
+end
