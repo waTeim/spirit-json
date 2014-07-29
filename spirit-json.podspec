@@ -12,15 +12,14 @@ std::vector or std::map implementations for JSON Objects
 object library or header file only use
                    DESC
   s.homepage     = "http://www.codeproject.com/Articles/20027/JSON-Spirit-A-C-JSON-Parser-Generator-Implemented"
-  s.screenshots  = 
   s.license      = 'MIT'
   s.author       = { "waTeim" => "truthset@gmail.com" }
   s.source       = { :git => "https://github.com/waTeim/spirit-json.git", :tag => s.version.to_s }
-
   s.platform     = :osx, '10.6'
   s.requires_arc = false
   s.vendored_libraries = 'lib/*.a'
-  s.source_files = s.public_header_files =
-     'include/*.{h,hpp}'
+  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(PODS_ROOT)/spirit-json/include"' }
+  s.private_header_files = s.source_files =
+    'include/*.{h,hpp}'
   s.header_mappings_dir = 'include'
 end
