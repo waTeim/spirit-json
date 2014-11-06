@@ -15,7 +15,8 @@ object library or header file only use
   s.license      = 'MIT'
   s.author       = { "waTeim" => "truthset@gmail.com" }
   s.source       = { :git => "https://github.com/waTeim/spirit-json.git", :tag => s.version.to_s }
-  s.platform     = :osx, '10.6'
+  s.platform     = :osx
+  s.osx.deployment_target = '10.10'
   s.requires_arc = false
   s.vendored_libraries = 'lib/*.a'
   s.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(PODS_ROOT)/spirit-json/include"' }
