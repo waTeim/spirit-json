@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "spirit-json"
-  s.version      = "4.0.6"
+  s.version      = "4.0.7"
   s.summary      = "A C++ JSON Parser/Generator Implemented with Boost Spirit"
   s.description  = <<-DESC
 JSON is a text file format similar to XML, but less verbose. It has been called "XML lite". This article describes JSON Spirit, a C++ library that reads and writes JSON files or streams. It is written using the Boost Spirit parser generator. If you are already using Boost, you can use JSON Spirit without any additional dependencies.
